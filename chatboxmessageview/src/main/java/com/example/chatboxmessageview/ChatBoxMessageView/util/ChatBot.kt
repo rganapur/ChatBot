@@ -1,4 +1,5 @@
- package com.example.chatboxmessageview.ChatBoxMessageView.util;
+package com.example.chatboxmessageview.ChatBoxMessageView.util;
+
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.util.Log

@@ -1,10 +1,20 @@
 apply plugin: 'com.android.library'
-
-apply plugin: 'kotlin-android-extensions'
-
 apply plugin: 'com.github.dcendents.android-maven'
 group='iniyan.dev'
 version='1.0'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+buildscript {
+    ext.kotlin_version = '1.2.70'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    }
+}
 android {
     compileSdkVersion 27
 
@@ -26,7 +36,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -42,4 +64,8 @@ dependencies {
 
     implementation 'com.android.volley:volley:1.1.1'
 
+}
+
+repositories {
+    mavenCentral()
 }

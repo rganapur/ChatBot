@@ -16,9 +16,9 @@ import android.widget.ArrayAdapter
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.admin.prematixchatbot.ChatBoxMessageView.model.Message
+import com.example.chatboxmessageview.ChatBoxMessageView.model.Message
 import com.example.chatboxmessageview.ChatBoxMessageView.model.Attribute
-import com.example.admin.prematixchatbot.R
+import com.example.chatboxmessageview.R
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.date_cell.view.*
 import java.util.*

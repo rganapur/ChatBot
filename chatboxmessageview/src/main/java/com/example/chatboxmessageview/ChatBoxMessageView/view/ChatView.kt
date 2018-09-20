@@ -16,13 +16,13 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.LinearLayout
+
+
 import com.example.chatboxmessageview.ChatBoxMessageView.model.Attribute
 import com.example.chatboxmessageview.ChatBoxMessageView.model.Message
 import com.example.chatboxmessageview.R
 import kotlinx.android.synthetic.main.chat_view.view.*
 import kotlinx.android.synthetic.main.option_button.view.*
-
-
 
 /**
  * Chat view with edit view and send button

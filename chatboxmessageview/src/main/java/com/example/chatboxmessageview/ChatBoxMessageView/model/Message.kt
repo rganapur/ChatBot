@@ -1,7 +1,7 @@
 package com.example.chatboxmessageview.ChatBoxMessageView.model;
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
-import com.example.admin.prematixchatbot.ChatBoxMessageView.util.*
+import com.example.chatboxmessageview.ChatBoxMessageView.util.*
 import java.util.*
 
 /**
