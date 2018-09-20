@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/chatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.example.admin.prematixchatbot.ChatBoxMessageView.view.MessageView
+            android:id="@+id/messageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/optionButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+           />
+
+        <!--<com.cenkgun.chatbar.ChatBarView-->
+            <!--android:id="@+id/chatbar"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:visibility="gone"-->
+            <!--app:cb_isSoftInputHidden="true"-->
+            <!--app:cb_isTextCleanerEnabled="true"-->
+            <!--app:cb_messageBoxHint="Enter Message"-->
+            <!--app:cb_micClickWarningMessage="warning message" />-->
+
+
+        <EditText
+            android:id="@+id/inputBox"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/input_hint"
+            android:inputType="textAutoComplete"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:maxLines="3"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/speak"
+            android:padding="5dp"
+android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_voice_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+
+            android:contentDescription="@string/send"
+            android:src="@drawable/ic_action_send"
+          />
+
+    </LinearLayout>
+
+</LinearLayout>
