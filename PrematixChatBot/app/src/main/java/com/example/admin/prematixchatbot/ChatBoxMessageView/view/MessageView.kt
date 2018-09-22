@@ -252,6 +252,14 @@ class MessageView : ListView, View.OnFocusChangeListener {
         messageAdapter.setOnIconLongClickListener(listener)
     }
 
+
+    fun setOnMessageClicked(listener: Message.onClickMessageListener) {
+        messageAdapter.setOnMessageClicked(listener)
+    }
+
+
+
+
     fun setMessageMarginTop(px: Int) {
         messageAdapter.setMessageTopMargin(px)
     }

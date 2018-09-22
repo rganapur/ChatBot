@@ -2,7 +2,7 @@
 <resources>
     <!-- Based on http://www.google.com/design/spec/style/color.html -->
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#006064</color>
+    <color name="colorPrimaryDark">#03c2b2</color>
     <color name="colorAccent">@color/cyan500</color>
 
     <!--Theme & Accent -->
@@ -13,6 +13,7 @@
     <color name="lightBlue500">#03A9F4</color>
 
     <color name="green500">#4CAF50</color>
+    <color name="teal100dark">#57c6bc</color>
 
 
 

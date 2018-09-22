@@ -36,6 +36,9 @@ class MessageAdapter(context: Context, resource: Int, private val objects: List<
     private var iconLongClickListener: Message.OnIconLongClickListener? = null
     private var bubbleLongClickListener: Message.OnBubbleLongClickListener? = null
 
+
+    private var messageOnClickListener: Message.onClickMessageListener? = null
+
     private var usernameTextColor = ContextCompat.getColor(getContext(), R.color.blueGray500)
     private var sendTimeTextColor = ContextCompat.getColor(getContext(), R.color.blueGray500)
     private var dateLabelColor = ContextCompat.getColor(getContext(), R.color.blueGray500)
@@ -207,7 +210,8 @@ class MessageAdapter(context: Context, resource: Int, private val objects: List<
                         )
                     }
 
-                } else -> {
+                }
+                else -> {
                     layoutInflater.inflate(
                             if (message.isRight) R.layout.message_text_right else R.layout.message_text_left,
                             messageViewHolder.mainMessageContainer).let {
@@ -253,6 +257,14 @@ class MessageAdapter(context: Context, resource: Int, private val objects: List<
                     iconLongClickListener?.onIconLongClick(message)
                     true
                 }
+
+            }
+
+
+            messageViewHolder.messageText?.setOnClickListener {
+
+                messageOnClickListener?.onMessageClicked(message)
+
 
             }
 
@@ -307,6 +319,12 @@ class MessageAdapter(context: Context, resource: Int, private val objects: List<
     fun setOnIconLongClickListener(onIconLongClickListener: Message.OnIconLongClickListener) {
         iconLongClickListener = onIconLongClickListener
     }
+
+
+    fun setOnMessageClicked(onClickMessageListener: Message.onClickMessageListener) {
+        messageOnClickListener = onClickMessageListener
+    }
+
 
     fun setOnBubbleLongClickListener(onBubbleLongClickListener: Message.OnBubbleLongClickListener) {
         bubbleLongClickListener = onBubbleLongClickListener

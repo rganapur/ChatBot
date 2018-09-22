@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/speakon"
+            android:icon="@drawable/ic_speakon"
+            android:title="MIC"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/speakoff"
+            android:icon="@drawable/ic_speakoff"
+            android:title="MIC"
+            app:showAsAction="always" />
+
+
+        <item
+            android:id="@+id/micon"
+            android:icon="@drawable/ic_mic_off_black_24dp"
+            android:title="MIC"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/micoff"
+            android:icon="@drawable/ic_mic"
+            android:title="mic off"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/clear"
+            android:icon="@drawable/ic_clear"
+            android:title="Clear"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Logout"
+            app:showAsAction="always" />
+    </group>
+</menu>

@@ -30,6 +30,9 @@ object ChatBot {
                 }
                 return "Hello$user!"
             }
+            receive.contains("python") -> return "Hi  python :)"
+            receive.contains("prematix") -> return "Hi prematix :)"
+            receive.contains("arjun") -> return "use SpeechRecognition.handleAudioPermissions(false) to disable this behavior. If this is set but the permission was not granted, SpeechRecognition will throw a SecurityException"
 
 
             receive.contains("hi") -> return "Hi $username :)"
@@ -38,12 +41,12 @@ object ChatBot {
             receive.contains("hey") -> return "Hey $username!"
             receive.startsWith("do ") -> return "Yes, I do."
             receive.contains("time") -> return "It's " + TimeUtils.calendarToString(Calendar.getInstance(), null) + "."
-            receive.contains("today") -> return "It's " + TimeUtils.calendarToString(Calendar.getInstance(), "M/d(E)")
+            receive.contains("today iniyan") -> return "It's " + TimeUtils.calendarToString(Calendar.getInstance(), "M/d(E)")
             else -> {
                 var reply = "Sorry ,Iniyan No Key Word Matched"
-                if (receive.length > 7) {
-                    reply += ", consectetur adipiscing elit, " + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-                }
+//                if (receive.length > 7) {
+//                    reply += ", consectetur adipiscing elit, " + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+//                }
                 return reply
             }
 

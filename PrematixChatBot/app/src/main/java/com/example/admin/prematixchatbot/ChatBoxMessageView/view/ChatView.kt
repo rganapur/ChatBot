@@ -249,6 +249,12 @@ class ChatView : LinearLayout {
         messageView.setOnIconLongClickListener(listener)
     }
 
+    fun setMessageOnLongClick(listener: Message.onClickMessageListener) {
+        messageView.setOnMessageClicked(listener)
+    }
+
+
+
     fun setLeftMessageTextColor(color: Int) {
         messageView.setLeftMessageTextColor(color)
     }

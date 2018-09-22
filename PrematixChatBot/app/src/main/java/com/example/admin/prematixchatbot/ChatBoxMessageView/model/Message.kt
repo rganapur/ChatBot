@@ -254,6 +254,9 @@ class Message {
         fun onLongClick(message: Message)
     }
 
+
+
+
     interface OnIconClickListener {
         fun onIconClick(message: Message)
     }
@@ -261,6 +264,12 @@ class Message {
     interface OnIconLongClickListener {
         fun onIconLongClick(message: Message)
     }
+
+    interface onClickMessageListener {
+        fun onMessageClicked(message: Message)
+    }
+
+
 
     companion object {
 
