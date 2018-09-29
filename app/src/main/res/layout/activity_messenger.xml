@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_vertical"
+        android:elevation="4dp"
+
+        app:theme="@style/MyToolbarTheme"
+        app:title="@string/app_name"/>
+    <com.example.admin.prematixchatbot.ChatBoxMessageView.view.ChatView
+        android:id="@+id/chat_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:date_separator_font_size="16sp"
+        app:message_font_size="12sp"
+        app:message_max_width="150dp"
+        app:option_button_enable="true"
+        app:text_selectable="true"
+        app:time_label_font_size="16sp"
+
+        />
+
+</LinearLayout>
